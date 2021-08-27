@@ -3,23 +3,19 @@ console.log('Reverse Integer Number')
 console.log('===================')
 
 
-isPalindrome = function(numbers) {
-    let number_string = numbers.toString();
-    let flag = false;
-    console.log(number_string)
-
-    for (let i=0; i<number_string.length/2; i++){
-        let j = number_string.length-i-1;
-        if(number_string[i] ===  number_string[j])
-        {
-            console.log(number_string[i])
-            flag = true;
-        }
-        else{
-            return false
-        }
+isPalindrome = function(x) {
+    let temp = x;
+    let rev=0;
+    while(x!=0){
+        rev=(rev*10)+(x%10)
+        x= parseInt(x/10)
+        console.log(rev)
     }
-if(flag) return true
-
+    if(temp>=0&&temp==rev){
+        return true;
+    }
+    else{
+        return false;
+    }
 };
-isPalindrome(-12121)
+isPalindrome(12121)
