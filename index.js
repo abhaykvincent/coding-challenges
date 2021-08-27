@@ -22,4 +22,4 @@ isPalindrome = function(numbers) {
 if(flag) return true
 
 };
-isPalindrome(-1221)
+isPalindrome(-12121)
